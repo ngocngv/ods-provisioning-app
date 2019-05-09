@@ -9,16 +9,6 @@ node {
 
 }
 
- properties([
-    parameters([
-      string(name: 'NEXUS_HOST', defaultValue: 'test', description: 'The target environment', )
-      string(name: 'NEXUS_USERNAME', defaultValue: 'test', description: 'The target environment', )
-      string(name: 'NEXUS_PASSWORD', defaultValue: 'test', description: 'The target environment', )
-      string(name: 'OPENSHIFT_API_URL', defaultValue: 'test', description: 'The target environment', )
-      string(name: 'BITBUCKET_HOST', defaultValue: 'test', description: 'The target environment', )
-    ])
- ])
-
 library identifier: 'ods-library@master', retriever: modernSCM(
   [$class: 'GitSCMSource',
    remote: sharedLibraryRepository,
